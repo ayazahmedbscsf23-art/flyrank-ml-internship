@@ -60,7 +60,7 @@
 
   <section>
     <h2>3. Methodology</h2>
-    <p>Describe the features, label definition, baseline, validation design, and leakage checks.</p>
+    <p>The methodology investigates whether page-level search performance features can support the identification of pages for further content review. Candidate features include average search position, click-through rate (CTR), clicks, and impressions, subject to verification against the available dataset. A baseline scoring method is used as a reference for evaluating the machine-learning approach. The target label is defined according to the project notebook and must represent the intended content-review opportunity without using future information or information derived directly from the outcome. Model evaluation should use the same evaluation split and metric for both the baseline and machine-learning model. Where appropriate, time-aware or client-grouped validation is used to reduce the risk of overly optimistic results. Features are also audited for target leakage, future-data leakage, and other information that would not be available when making a real decision..</p>
   </section>
 
   <section>
