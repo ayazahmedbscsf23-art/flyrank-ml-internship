@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlyRank ML Capstone Research</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.7;
+      color: #222;
+    }
+    header, section, footer {
+      margin-bottom: 32px;
+    }
+    h1, h2 {
+      color: #17365d;
+    }
+    footer {
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Machine Learning for Website Content Improvement</h1>
+    <p><strong>FlyRank ML Internship Capstone</strong></p>
+  </header>
+
+  <section>
+    <h2>Abstract</h2>
+    <p>
+      This project explores whether machine learning can help identify
+      website pages that may benefit from content review. It uses
+      page-level search performance data and compares a machine-learning
+      approach with a baseline scoring method. Model performance is
+      evaluated using a consistent validation design. The findings
+      are interpreted in light of data limitations, possible leakage,
+      and observed prediction errors. The resulting approach is intended
+      to support human decision-making rather than guarantee improvements
+      in website performance.
+    </p>
+  </section>
+
+  <section>
+    <h2>1. Introduction / Problem Statement</h2>
+    <p>This project investigates whether page-level search performance data can help identify website pages that may benefit from content review. The central research question is: Can a machine-learning approach provide useful decision-support signals beyond a simple baseline scoring method? The project examines available features such as average search position, click-through rate (CTR), clicks, and impressions to explore patterns associated with content-review opportunities. Because these signals do not directly establish that a content update will improve performance, the model's outputs are treated as recommendations for further investigation rather than guaranteed outcomes..</p>
+  </section>
+
+  <section>
+    <h2>2. Data</h2>
+    <p>This project uses the data provided through the FlyRank ML Internship repository. The analysis focuses on page-level search performance, including average search position, click-through rate (CTR), clicks, and impressions. These metrics are examined to explore potential content-review opportunities. The exact dataset release, source tables, date range, and exclusion rules must be confirmed from the project notebooks and dataset documentation before final publication. To protect privacy, the published paper should contain only aggregated results and approved examples, with client names, private URLs, and sensitive search queries excluded..</p>
+  </section>
+
+  <section>
+    <h2>3. Methodology</h2>
+    <p>The methodology investigates whether page-level search performance features can support the identification of pages for further content review. Candidate features include average search position, click-through rate (CTR), clicks, and impressions, subject to verification against the available dataset. A baseline scoring method is used as a reference for evaluating the machine-learning approach. The target label is defined according to the project notebook and must represent the intended content-review opportunity without using future information or information derived directly from the outcome. Model evaluation should use the same evaluation split and metric for both the baseline and machine-learning model. Where appropriate, time-aware or client-grouped validation is used to reduce the risk of overly optimistic results. Features are also audited for target leakage, future-data leakage, and other information that would not be available when making a real decision..</p>
+  </section>
+
+  <section>
+    <h2>4. Results</h2>
+    <p>The evaluation compares the machine-learning model with the baseline scoring method using the same evaluation data and metric to support a fair comparison. The results should report the measured performance of each approach, the difference between them, and relevant error patterns. A separate validation audit examines how performance changes under a more realistic time-aware or client-grouped split. This comparison helps assess whether the original evaluation may have overstated generalization to unseen data. Charts and tables should be generated from the executed project notebooks and included only after their values have been verified. Until these measurements are added, no conclusion is made that the machine-learning model outperforms the baseline..</p>
+  </section>
+
+  <section>
+    <h2>5. Limitations & Honest Framing</h2>
+    <p>This project has several limitations. Page-level search performance metrics show associations and do not establish that updating content will cause better results. The quality of the findings depends on the dataset's coverage, the accuracy of the target-label definition, and the suitability of the validation design. Random splits may produce overly optimistic estimates when related pages or observations from the same client appear in both training and test data. Time-aware or client-grouped evaluation can provide a more realistic assessment, although it cannot eliminate every source of bias. Model predictions may also be affected by missing values, changes in search behaviour, and patterns not represented in the training data. Therefore, the model should be treated as a decision-support aid, and its recommendations should be reviewed by a human before action is taken.</p>
+  </section>
+
+  <section>
+    <h2>6. Ranked Recommendations</h2>
+    <p>The following action playbook provides a cautious, evidence-aware approach to using page-level performance signals.
+
+1. **Priority 1 — Review pages with potential improvement opportunities.** Use the model's scores as a shortlist for human review, not as a guarantee that a page needs updating.
+2. **Priority 2 — Verify the underlying data.** Check data completeness, metric definitions, and the time period represented before interpreting a page's score.
+3. **Priority 3 — Investigate the likely cause.** Review relevant content and search performance context before deciding whether to update a page.
+4. **Priority 4 — Validate recommendations against real outcomes.** Where possible, measure performance after approved content changes and compare it with a suitable reference or evaluation design.
+5. **Priority 5 — Monitor model reliability.** Reassess performance on newer data, inspect errors, and check whether the model remains useful as search behaviour changes.
+
+These recommendations are provisional decision-support steps. Their priority should be refined using the project's measured results and validation findings..</p>
+  </section>
+
+  <section>
+    <h2>7. Reproducibility</h2>
+    <p>
+      <a href="https://github.com/ayazahmedbscsf23-art/flyrank-ml-internship">
+        
+<section>
+  <h2>7. Reproducibility</h2>
+  <p>
+    The project repository contains the notebooks and supporting materials
+    used during the capstone workflow. Readers can inspect the code,
+    review the evaluation approach, and reproduce the analysis where
+    the required data and dependencies are available.
+  </p>
+  <ul>
+    <li>
+      <a href="https://github.com/ayazahmedbscsf23-art/flyrank-ml-internship">
+        Project repository
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/ayazahmedbscsf23-art/flyrank-ml-internship/tree/main/work/notebooks">
+        Project notebooks
+      </a>
+    </li>
+  </ul>
+</section>
+
+      </a>
+    </p>
+  </section>
+
+  <footer>
+    <h2>Acknowledgments & Data Credit</h2>
+    <p>Built on the <a href="https://flyrank.ai">FlyRank ML Internship dataset</a>.</p>
+    <p>Results should be interpreted within the limitations of the data and evaluation design.</p>
+  </footer>
+</body>
+</html>
+
